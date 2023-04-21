@@ -17,7 +17,10 @@ void inp_int(){
 void out_int(){
     int n = 44;
     // ofstream - output file stream - поток на запись
-    ofstream test("test.txt", ios::app); // сохраняем прежнее сост файла при помощи app
+
+    ofstream test("test.txt", ios::app); // сохраняем прежнее сост файла при помощи app иначе будет перезапись
+    test << n << "\n";
+    test << "Ку-ку" << "\n";
 }
 
 int main(){
