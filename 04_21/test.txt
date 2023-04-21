@@ -1,4 +1,6 @@
-123
-abc
-44
-Ку-ку
+11 is my favorite number
+21
+Hhh
+hohohoh
+end of file eof -1
+

@@ -23,13 +23,53 @@ void out_int(){
     test << "Ку-ку" << "\n";
 }
 
+void read_f(const string &filename){
+    ifstream fin(filename);
+    int n;
+    string str;
+
+    string line;
+    getline(fin, line);
+    cout << line << "\n";
+
+    fin >> n;
+    cout << n << "\n";
+
+    getline(fin, str);
+    cout << str << "\n";
+    getline(fin, str);
+    cout << str << "\n";
+}
+
+string in_line(){
+    string line;
+    getline(cin, line);
+    return line;
+}
+
+void pri_all(const string &filename){
+    ifstream fin(filename);
+
+    if (not fin.good()){
+        cout << "ошибка стоп 00000000000000000000";
+        return;
+    }
+    while (not fin.eof()){
+        string line;
+        getline(fin, line);
+        cout << line << "\n";
+    }
+
+}
+
 int main(){
     int n;
-    cout << "Haha\n";
     // ifstream test("test.txt");
 
     // test >> n;
     // cout << n << "\n";
-    out_int();
+    //read_f("test.txt");
+    cout << "File:\n";
+    pri_all(in_line());
 }
 
