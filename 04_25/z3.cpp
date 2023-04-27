@@ -67,7 +67,7 @@ void del_i(int *mas, int *size){
     int n1;
     cout << "Введите индекс для удаления:\n";
     cin >> ind;
-    if (ind < 0){
+    if (ind < 0 || *size < 0){
         throw "Такого значения в массиве нет!";
     } else {
         for (int i = ind; i < *size; i++){
